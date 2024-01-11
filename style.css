@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'CustomFont'; 
+    src: url('./assets/fonts/static/WorkSans-SemiBold.ttf');
+  }
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'CustomFont';
+}
+
+.main {
+    background-color: rgb(243, 231, 255);
+}
+
+.background-pattern {
+    background: url('./assets/images/background-pattern-desktop.svg');
+    width: 100%;
+    height: 30vh;
+}
+
+.faqs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    border-radius: 12px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.95px 2.95px 3.6px;
+
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.title h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.title img {
+    margin-right: 20px;
+}
+
+.faq {
+    border-bottom: rgb(210, 210, 210) 1px solid;
+    padding: 20px;
+    transition: all .3s ease-in-out;
+}
+
+.faq:last-child {
+    border-bottom: none;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.question h5 {
+    cursor: pointer;
+}
+
+.question h5:hover {
+    color: blueviolet;
+}
+
+.question img {
+    cursor: pointer;
+}
+
+.answer {
+    display: none;
+    margin-top: 30px;
+    text-align: justify;
+    color: gray;
+    font-size: 14px;
+    transition: all 0.6s ease-in-out;
+}
+
+@media screen and (max-width: 500px) {
+    .background-pattern {
+        background: url('./assets/images/background-pattern-mobile.svg');
+    }
+
+    .faqs {
+        position: absolute;
+        top: 40%;
+        left: 41%;
+        transform: translate(-50%, -50%);
+        width: 380px;
+    }
+
+}
